@@ -118,7 +118,7 @@ Agora basta digitar o seguinte comando:
 php -S localhost:8080 webservice.php
 ```
 
-***##### LEMBRE-SE DE CRIAR UM BANCO DE DADOS E IMPORTAR O SQL QUE ESTÁ LOCALIZADO EM /api/best-customers.sql***       
+***LEMBRE-SE DE CRIAR UM BANCO DE DADOS E IMPORTAR O SQL QUE ESTÁ LOCALIZADO EM /api/best-customers.sql***       
 
 Fiquem à vontade em usar e testar ambas as conexões! :)  
 
