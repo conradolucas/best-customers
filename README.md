@@ -100,10 +100,7 @@ Crie um banco de dados mySQL em sua máquina e importe o arquivo **best-customer
 
 **Altere a função que conecta no banco com as credênciais criadas para seu banco**
 
-```
-```
 ``` php
-
 $conn = new \PDO("mysql:host=ENDERECO_AQUI;dbname=BANCO_AQUI","USUARIO_AQUI","SENHA_AQUI");
 
 ```
