@@ -1,4 +1,4 @@
-# Aplicação para teste de habilidades, crud RESTful API em Node.js & Express.js com MongoDB
+# Aplicação para teste de habilidades, CRUD RESTful API em Node.js & Express.js com MongoDB
 
 Código desenvolvido por Lucas Conrado
 (www.conradoweb.esy.es)
@@ -10,7 +10,7 @@ Código desenvolvido por Lucas Conrado
 - Node.js ~6.x;
 - Express.js;
 - PHP; (Foi bem feio o código, só pra mostrar algo)
-- mySQL;
+- MySQL;
 - Conceito RESTful;
 - MongoDB;
 - Mongoose;
@@ -34,24 +34,23 @@ Antes de instalar as dependências no projeto, você precisa já ter instalado n
 
 * **Node.js**: Caso não tenha, basta realizar o download [Aqui](https://nodejs.org/en/)
 * **MongoDB**: Caso também não tenha, basta realizar o download [Aqui](https://www.mongodb.com/download-center#community)
-* **Apache/WAMP/XAMP**: Caso decida utilizar a versão em php, utileze um servidor imbutido ou da forma que preferir trabalhar.
+* **WAMP/XAMP**: Caso decida utilizar a versão em php, um servidor imbutido ou da forma que preferir trabalhar.
 
 #### Downloads para PHP
 
-* PHP download [Aqui](http://php.net/downloads.php)
-##### (Se estiver no windows, p/ servidor embutido, é necessário criar váriaveis de ambiente) [SAIBA +](http://www.hardware.com.br/tutoriais/apache-php-mysql-windows/configurando-php-manualmente.html)
+* PHP download [Aqui](http://php.net/downloads.php) ##### (Se estiver no windows, p/ servidor embutido, é necessário  criar váriaveis de ambiente) ##### [SAIBA +](http://www.hardware.com.br/tutoriais/apache-php-mysql-windows/configurando-php-manualmente.html)
 * WAMP download [Aqui](http://www.wampserver.com/en/)
 * XAMPP download [Aqui](https://www.apachefriends.org/pt_br/download.html)
 
 ### Instalando as Dependências
 
-Abre o CMD (caso esteja no Windows) e digite a path do projeto
+Abra o CMD (caso esteja no Windows) e digite a path do projeto
 
 ```
 cd "C:\Users\SeuComputador\Documents\...\Projeto"
 ```
 
-Depois, quando estiver na pasta do projeto, digite no cmd a seguinte instrução:
+Depois, quando estiver na pasta do projeto, digite linha de comando a seguinte instrução:
 
 ```
 npm install
@@ -62,19 +61,19 @@ Ao digitar a instrução acima, automaticamente será baixado todas as dependên
 * `node_modules` - pasta será criada, contêm os packages do npm que são necessários para rodar o CRUD.
 
 ### Executando a Aplicação
-###### Você pode rodar a aplicação executando o arquivo start-backend-nodejs.sh para API node.js e executar start-backend-php.sh para consumir os dados com PHP + mySQL
+***Você pode rodar a aplicação executando o arquivo start-backend-nodejs.sh para API node.js e executar start-backend-php.sh para consumir os dados com PHP + mySQL***
 
-Após a instação das dependencias, sem seja retornado erros, vamos digitar no cmd o comando abaixo, para iniciar o gulp.
+Após a instação das Dependências, sem seja retornado erros, vamos digitar no terminal o comando abaixo, para realizar os build's e iniciar o live-server do gulp.
 
 ```
 gulp
 ```
 
-Depois, você precisará abrir um outro terminal na sua máquina para iniciar a API.
+Depois disso o front-end já deve funcionar, agora você precisará abrir um outro terminal na sua máquina para iniciar a API.
 
 #### Para API com node.js + MongoDB
 
-Digite na tela do cmd o seguinte comando:
+Digite no terminal o seguinte comando:
 
 ```
 mongod
@@ -115,7 +114,7 @@ Abra outro terminal, nele acesse o diretório da API
 cd "C:\Users\SeuComputador\Documents\...\Projeto\api"
 ```
 
-Agora basta digitar na tela do cmd o seguinte comando:
+Agora basta digitar o seguinte comando:
 
 ```
 php -S localhost:8080 webservice.php
