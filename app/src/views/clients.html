@@ -39,11 +39,11 @@
             </div>
 
             <div ng-class="{'has-error' : formClient.telClient.$invalid && formClient.telClient.$dirty, 'has-success' : formClient.telClient.$valid, 'form-group': true }">
-              <input type="text" ng-model="client.tel" name="telClient" ng-required="true" class="form-control tel" ng-pattern="/^\d{4,5}-\d{4}$/" placeholder="Insira um telefone">
+              <input type="text" ng-model="client.tel" name="telClient" ng-required="true" class="form-control tel" ng-pattern="/^\(\d{2}\)\d{4,5}-\d{4}$/" placeholder="Insira um telefone" mask-tel>
             </div>
 
             <div ng-class="{'has-error' : formClient.cepClient.$invalid && formClient.cepClient.$dirty, 'has-success' : formClient.cepClient.$valid, 'form-group': true }">
-              <input type="text" ng-model="client.cep" name="cepClient" ng-required="true" class="form-control cep" ng-pattern="/^\d{5}-\d{3}$/" placeholder="Insira um CEP"><!-- address cep or zip code? Decision Lucas ... -->
+              <input type="text" ng-model="client.cep" name="cepClient" ng-required="true" class="form-control cep" ng-pattern="/^\d{5}-\d{3}$/" placeholder="Insira um CEP" mask-cep><!-- address cep or zip code? Decision Lucas ... -->
             </div>
 
             <div ng-class="{'has-error' : formClient.addressClient.$invalid && formClient.addressClient.$dirty, 'has-success' : formClient.addressClient.$valid, 'form-group': true }">

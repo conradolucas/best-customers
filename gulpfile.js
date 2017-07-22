@@ -41,7 +41,7 @@ gulp.task('minify-css', () => {
 gulp.task('minify-js', () => {
   return gulp.src(['./app/core/models/app.js'])
   .pipe(browserify())
-  .pipe(uglify())
+  //.pipe(uglify())
   .pipe(rename("all.min.js"))
   .pipe(gulp.dest('./public/build/js/'));
 });

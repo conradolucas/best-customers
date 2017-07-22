@@ -48,6 +48,16 @@ header h1{
 header h1 span{
   color: #f9d3cb;
 }
+section.messages{
+  height: 0
+}
+section.messages .alert{
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-top: 16px;
+}
 section.add{
   color: #fff;
   padding: 20px 0;

@@ -8,50 +8,46 @@
 
 
     if($post){
-        if($post->id){
 
-            if($post->delete){
-              $ret = del($post->delete);
-              if($ret){
-                $date['status'] = true;
-                $date['msg'] = "Delete ok!";
-                echo json_encode($date);
-                exit;
-              }else{
-                $post['status'] = false;
-                $post['msg'] = "Error!";
-                echo json_encode($post);
-                exit;
-              }
-            }
-
-            $ret = update($post);
-
-            if($ret){
-                $date['status'] = true;
-                $date['msg'] = "Success! ID: {$id}";
-                echo json_encode($date);
-                exit;
-            }else{
-                $post['status'] = false;
-                $post['msg'] = "Error!";
-                echo json_encode($post);
-                exit;
-            }
-        }
-
-        $id = save($post);
-
-        if($id){
-            $date['status'] = true;
-            $date['msg'] = "Success! ID: {$id}";
-            $date['client'] = find($id);
-            echo json_encode($date);exit;
+      if(isset($post->delete)){
+        $ret = delete($post->id);
+        if($ret){
+          $date['status'] = true;
+          $date['msg'] = "Success!";
+          echo json_encode($date);exit;
         }else{
-            $post['status'] = false;
-            $post['msg'] = "Error!";
-            echo json_encode($post);exit;
+          $post['status'] = false;
+          $post['msg'] = "Error!";
+          echo json_encode($post);exit;
         }
+      }
+
+      if(isset($post->id)){
+        $ret = update($post);
+        if($ret){
+          $date['status'] = true;
+          $date['msg'] = "Success!";
+          echo json_encode($date);exit;
+        }else{
+          $post['status'] = false;
+          $post['msg'] = "Error!";
+          echo json_encode($post);exit;
+        }
+      }
+
+      $id = save($post);
+
+      if($id){
+          $date['status'] = true;
+          $date['msg'] = "Success! ID: {$id}";
+          $date['client'] = find($id);
+          echo json_encode($date);exit;
+      }else{
+          $post['status'] = false;
+          $post['msg'] = "Error!";
+          echo json_encode($post);exit;
+      }
+
     }
 
     $date = listAll();
