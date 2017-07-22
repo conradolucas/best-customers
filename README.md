@@ -38,7 +38,7 @@ Antes de instalar as dependências no projeto, você precisa já ter instalado n
 
 #### Downloads para PHP
 
-* PHP download [aqui](http://php.net/downloads.php) **(Se estiver no windows, p/ servidor embutido, é necessário  criar váriaveis de ambiente)** [SAIBA +](http://www.hardware.com.br/tutoriais/apache-php-mysql-windows/configurando-php-manualmente.html)
+* PHP download [aqui](http://php.net/downloads.php) **(Se estiver no windows, p/ servidor embutido, é necessário  criar váriaveis de ambiente)** [SAIBA +](http://www.hardware.com.br/tutoriais/apache-php-MySQL-windows/configurando-php-manualmente.html)
 * WAMP download [aqui](http://www.wampserver.com/en/)
 * XAMPP download [aqui](https://www.apachefriends.org/pt_br/download.html)
 
@@ -61,9 +61,9 @@ Ao digitar a instrução acima, automaticamente será baixado todas as dependên
 * `node_modules` - pasta será criada, contêm os packages do npm que são necessários para rodar o CRUD.
 
 ### Executando a Aplicação
-***Você pode rodar a aplicação executando o arquivo start-backend-nodejs.sh para API node.js e executar start-backend-php.sh para consumir os dados com PHP + mySQL***
+***Você pode rodar a aplicação executando o arquivo start-backend-nodejs.sh para API node.js e executar start-backend-php.sh para consumir os dados com PHP + MySQL***
 
-Após a instação das Dependências, sem seja retornado erros, vamos digitar no terminal o comando abaixo, para realizar os build's e iniciar o live-server do gulp.
+Após a instação das dependências, se correr tudo certo e não retornar erros, vamos digitar no terminal o comando abaixo, para realizar os build's e iniciar o live-server do gulp.
 
 ```
 gulp
@@ -90,20 +90,21 @@ Dentro do path digite o seguinte comando:
 node webservice.js
 ```
 
-Caso o MongoDb esteja devidamente instalado em sua máquina, ele iniciará o serviço mostrando que a port 27017 foi iniciada.
+Caso o MongoDB esteja devidamente instalado em sua máquina, ele iniciará o serviço mostrando que a porta 27017 foi iniciada.
 
-Agora, abre a página da aplicação em `http://localhost:8000/api`. E pronto a aplicação será executada de maneira local na sua máquina.
+Agora, abra a página da aplicação em `http://localhost:8000`. E pronto as API's serão executadas de maneira local na sua máquina.
 
-#### Para API com PHP + mySQL (Servidor embutido)
+#### Para API com PHP + MySQL (Servidor embutido)
 
-Crie um banco de dados mySQL em sua máquina e importe o arquivo **best-customers.sql** localizado dentro da pasta /api
+Crie um banco de dados MySQL em sua máquina e importe o arquivo **best-customers.sql** localizado dentro da pasta /api
 
 **Altere a função que conecta no banco com as credênciais criadas para seu banco**
 
 ``` php
-$conn = new \PDO("mysql:host=ENDERECO_aqui;dbname=BANCO_aqui","USUARIO_aqui","SENHA_aqui");
+$conn = new \PDO("MySQL:host=ENDERECO_aqui;dbname=BANCO_aqui","USUARIO_aqui","SENHA_aqui");
 
 ```
+###### Sim, isso está ruim.
 
 Abra outro terminal, nele acesse o diretório da API
 
@@ -117,9 +118,9 @@ Agora basta digitar o seguinte comando:
 php -S localhost:8080 webservice.php
 ```
 
-##### LEMBRE-SE DE CRIAR UM BANCO DE DADOS E IMPORTAR O SQL LOCALIZADO EM /api/best-customers.sql       
+***##### LEMBRE-SE DE CRIAR UM BANCO DE DADOS E IMPORTAR O SQL QUE ESTÁ LOCALIZADO EM /api/best-customers.sql***       
 
-Fiquem à vontade em usar ou até mesmo testar ambas as conexões!! :)  
+Fiquem à vontade em usar e testar ambas as conexões! :)  
 
 ## Testando a Aplicação no Postman:
 
