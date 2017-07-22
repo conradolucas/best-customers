@@ -23,7 +23,7 @@ Caso você deseja executar o projeto na sua máquina local, basta seguir os pass
 
 ## Começando...
 
-Para começar, você deve simplesmente clonar o repositório do projeto na sua máquina e instalar as dependências.
+Para começar, você deve simplesmente clonar o repositório do projeto na sua máquina para depois instalar as dependências.
 
 ```
 git clone git@github.com:Conradolucas/best-customers.git
@@ -32,15 +32,15 @@ git clone git@github.com:Conradolucas/best-customers.git
 
 Antes de instalar as dependências no projeto, você precisa já ter instalado na sua máquina:
 
-* **Node.js**: Caso não tenha, basta realizar o download [Aqui](https://nodejs.org/en/)
-* **MongoDB**: Caso também não tenha, basta realizar o download [Aqui](https://www.mongodb.com/download-center#community)
+* **Node.js**: Caso não tenha, basta realizar o download [aqui](https://nodejs.org/en/)
+* **MongoDB**: Caso também não tenha, basta realizar o download [aqui](https://www.mongodb.com/download-center#community)
 * **WAMP/XAMP**: Caso decida utilizar a versão em php, um servidor imbutido ou da forma que preferir trabalhar.
 
 #### Downloads para PHP
 
-* PHP download [Aqui](http://php.net/downloads.php) ##### (Se estiver no windows, p/ servidor embutido, é necessário  criar váriaveis de ambiente) ##### [SAIBA +](http://www.hardware.com.br/tutoriais/apache-php-mysql-windows/configurando-php-manualmente.html)
-* WAMP download [Aqui](http://www.wampserver.com/en/)
-* XAMPP download [Aqui](https://www.apachefriends.org/pt_br/download.html)
+* PHP download [aqui](http://php.net/downloads.php) **(Se estiver no windows, p/ servidor embutido, é necessário  criar váriaveis de ambiente)** [SAIBA +](http://www.hardware.com.br/tutoriais/apache-php-mysql-windows/configurando-php-manualmente.html)
+* WAMP download [aqui](http://www.wampserver.com/en/)
+* XAMPP download [aqui](https://www.apachefriends.org/pt_br/download.html)
 
 ### Instalando as Dependências
 
@@ -101,7 +101,7 @@ Crie um banco de dados mySQL em sua máquina e importe o arquivo **best-customer
 **Altere a função que conecta no banco com as credênciais criadas para seu banco**
 
 ``` php
-$conn = new \PDO("mysql:host=ENDERECO_AQUI;dbname=BANCO_AQUI","USUARIO_AQUI","SENHA_AQUI");
+$conn = new \PDO("mysql:host=ENDERECO_aqui;dbname=BANCO_aqui","USUARIO_aqui","SENHA_aqui");
 
 ```
 
