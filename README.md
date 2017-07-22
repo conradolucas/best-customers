@@ -125,6 +125,7 @@ Fiquem à vontade em usar e testar ambas as conexões! :)
 ## Testando a Aplicação no Postman:
 
 Caso queira testar as API's desenvolvidas no projeto, primeiro baixe o [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop).
+
 Depois de realizar o download, basta testas as rotas abaixo:
 
   ROTA                    |     HTTP(Verbo)   |      Descrição        |
