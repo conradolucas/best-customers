@@ -1,0 +1,51 @@
+{
+  "name": "dashboard_best_customers",
+  "title": "Dashboard Best Customers",
+  "description": "This app is a dashboard created to manage clients. Developed with goal to testing my skills, participating in a selection process promoted by Horizon Four. These are technologies chosen: Angular.JS to front-end and node.js to back-end. Considerations Of technologies: Angular.JS was used because there is still a market and lots of firewood to burn.",
+  "version": "1.0.0",
+  "author": "Lucas Conrado",
+  "url": "https://github.com/webconrado/",
+  "email": "webconrado@gmail.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webconrado/best-customers.git"
+  },
+  "engines": {
+    "node": "<=6.10.0 <7.0.0",
+    "npm": "^3.10.10"
+  },
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.5",
+    "angular-aria": "^1.6.5",
+    "angular-material": "^1.1.4",
+    "angular-messages": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^3.5.0",
+    "gulp-debug": "^3.1.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "*",
+    "gulp-jasmine-browser": "^1.7.3",
+    "gulp-live-server": "0.0.29",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "^1.5.3",
+    "gulp-uncache": "*",
+    "gulp-useref": "*",
+    "jasmine": "*",
+    "jasmine-node": "^1.14.5",
+    "mongoose": "4.10.8",
+    "morgan": "^1.8.2",
+    "newman": "^3.7.4",
+    "xml2js": "^0.4.17"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node"
+  }
+}

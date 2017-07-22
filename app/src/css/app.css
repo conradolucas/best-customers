@@ -1,0 +1,271 @@
+body{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 14.5px;
+}
+h1, h2, h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+section h2{
+  margin: 0 0 20px;
+}
+.form-control {
+  height: 42px;
+  padding: 3px 12px 6px;
+  margin: 0 9px 0 0;
+  border: 2px solid rgba(9, 122, 140, 0.79);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-size: 16px;
+  -webkit-box-shadow: inset 1px 0px 7px 2px rgba(0,0,0,.18);
+  box-shadow: inset 1px 0px 7px 2px rgba(0,0,0,.18);
+}
+.form-control:focus {
+  border-color: rgb(18, 71, 114);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(18, 71, 114, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(18, 71, 114, 0.6);
+}
+.btn[disabled],
+fieldset[disabled] .btn {
+  filter: alpha(opacity=40);
+  opacity: .40;
+}
+header{
+  background: #760e23;
+  padding: 20px 0;
+}
+header h1{
+  color: #78BBEA;
+  text-transform: uppercase;
+  margin: 43px 0;
+  font-weight: 700;
+}
+header h1 span{
+  color: #f9d3cb;
+}
+section.add{
+  color: #fff;
+  padding: 20px 0;
+  background: #78BBEA;
+}
+section.add form > div{
+  display: inline-block;
+}
+section.add form input.email{
+  width: 270px;
+}
+section.add form input.tel{
+  width: 155px;
+}
+section.add form input.cep{
+  width: 125px;
+}
+section.add form input.address{
+  width: 265px;
+}
+section.add-success{
+  background: #0c8d69;
+}
+section.add-error{
+  background: #f13330;
+}
+section.add.add-success .has-success .form-control {
+  border-color: #226b23;
+}
+section.add.add-success .form-control{
+  border: 2px solid rgb(88, 85, 85);
+}
+section.add.add-success .form-control:focus{
+  border: 2px solid rgb(0, 0, 0);
+}
+section.add.add-error .has-error .form-control {
+  border-color: #771025;
+}
+section.add.add-error .form-control{
+  border: 2px solid #ef7e8f;
+}
+section.list{}
+/*section.list h2{
+  margin: 0 0 20px;
+}*/
+section.list .form-control{
+  border: 1px solid rgb(216, 126, 141);
+  box-shadow: inherit;
+}
+section.list .form-control:focus {
+  border-color: #760e23;
+  -webkit-box-shadow:inherit;
+  box-shadow: inherit;
+}
+section.list .table > thead > tr > th{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #78bbea;
+  padding: 14px 0 20px 8px !important;
+  color: #78bbea;
+  font-size: 16px;
+}
+section.list .table-striped > tbody > tr:nth-of-type(odd){
+  background-color: rgba(255, 195, 204, 0.43);
+}
+section.list .table-striped > tbody > tr:nth-of-type(even){
+  background-color: rgba(120, 187, 234, 0.15);
+}
+section.list .table > tbody > tr > td,
+section.list .table > tbody > tr >th,
+section.list .table > tfoot > tr >td,
+section.list .table > tfoot > tr >th,
+section.list .table > thead > tr >td,
+section.list .table > thead > tr >th{
+  padding: 14px 0 0 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #1f8d9e;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+}
+section.list .table > thead > tr > th.name{
+  width:13%;
+}
+section.list .table > thead > tr > th.email{
+  width:20%;
+}
+section.list .table > thead > tr > th.tel{
+  width:12%;
+}
+section.list .table > thead > tr > th.cep{
+  width:10%;
+}
+section.list .table > thead > tr > th.address{
+  width: 28%;
+}
+section.list .table > thead > tr > th.action{
+  width: 16%;
+}
+section.list .btn{
+  top: -7px;
+  position: relative;
+}
+section.list .pagination > .active > a,
+section.list .pagination > .active>a:focus,
+section.list .pagination > .active>a:hover,
+section.list .pagination > .active>span,
+section.list .pagination > .active>span:focus,
+section.list .pagination > .active>span:hover {
+  background-color: #760e23;
+  border-color: #f59fac !important;
+  border-width: 1px;
+  border-style: solid;
+}
+section.list .pagination-sm > li > a,
+section.list .pagination-sm > li > span{
+  padding: 6px 12px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  /*background-color: #760e23;*/
+  border-color:#f59fac;
+  margin-left: 1px;
+}
+footer{
+  background: #222;
+  color:#fff;
+  padding: 15px 0;
+}
+footer p{
+  margin: 0;
+}
+footer span{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #771025;
+  font-weight: 700;
+  margin: 0 0 0 7px;
+  text-shadow: 0 0 5px rgb(245, 159, 172);
+}
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width:1199px){
+  .form-control {
+    margin: 0 6px 0 0;
+  }
+  section.add form input.email,
+  section.add form input.address{
+    width: 182px;
+  }
+  section.list .btn {
+    padding: 6px 5px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 1199px){
+  section.list .btn {
+    top: -13px;
+    margin: 7px 0 0;
+  }
+}
+@media (max-width:767px){
+  header h1 {
+    margin: 20px 0 5px;
+  }
+  h1, h2, h3{
+    text-align: center;
+  }
+  header .col-sm-2{
+    text-align: center;
+  }
+  section.add {
+    padding: 15px 0 3px;
+  }
+  section.add form > div {
+    display: block;
+  }
+  .img-responsive{
+    display: inline-block;
+  }
+  .form-control {
+    width: 100% !important;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  section.list .table > thead:first-child > tr:first-child > th{
+  }
+  footer span {
+    display: block;
+    margin: 5px 0 0 7px;
+  }
+}
+@media (max-width:480px){
+  section.list .table > thead > tr > th {
+    padding: 14px 0 20px 0 !important;
+    font-size: 14px;
+  }
+  section.list .table > thead > tr > th.name{
+    width:30%;
+  }
+  section.list .table > thead > tr > th.email{
+    width:30%;
+  }
+  section.list .table > thead > tr > th.tel{
+    width:20%;
+  }
+  section.list .table > thead > tr > th.cep{
+    width:0%;
+  }
+  section.list .table > thead > tr > th.address{
+    width: 0%;
+  }
+  section.list .table > thead > tr > th.action{
+    width: 20%;
+  }
+  section.list .table > tbody > tr > td,
+  section.list .table > tbody > tr >th,
+  section.list .table > tfoot > tr >td,
+  section.list .table > tfoot > tr >th,
+  section.list .table > thead > tr >td{
+    font-size: 12px;
+  }
+}

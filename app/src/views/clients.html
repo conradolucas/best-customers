@@ -1,0 +1,141 @@
+
+<header ng-include="'views/header.html'"></header>
+
+<section class="messages">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 ng-bind="bonus"></h3>
+        <alert-msg ng-show="msg" title="Alert:">
+            {{ msg }}
+        </alert-msg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Better these validations -->
+<section class="add" ng-class="{'add-error' : formClient.nameClient.$invalid && formClient.nameClient.$dirty || formClient.emailClient.$invalid && formClient.emailClient.$dirty || formClient.telClient.$invalid && formClient.telClient.$dirty || formClient.cepClient.$invalid && formClient.cepClient.$dirty || formClient.addressClient.$invalid && formClient.addressClient.$dirty, 'add-success' : formClient.nameClient.$valid || formClient.emailClient.$valid || formClient.telClient.$valid || formClient.cepClient.$valid || formClient.addressClient.$valid, 'form-group': true }">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Adicionar novo cliente</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div class="form-inline">
+          <form name="formClient">
+            <div ng-class="{'has-error' : formClient.nameClient.$invalid && formClient.nameClient.$dirty, 'has-success' : formClient.nameClient.$valid, 'form-group': true }">
+              <input type="text" ng-model="client.name" name="nameClient" ng-required="true" class="form-control" ng-minlength="3" ng-maxlength="100" placeholder="Insira um nome">
+            </div>
+
+            <div ng-class="{'has-error' : formClient.emailClient.$invalid && formClient.emailClient.$dirty, 'has-success' : formClient.emailClient.$valid, 'form-group': true }">
+              <input type="email" ng-model="client.email" name="emailClient" ng-required="true" class="form-control email" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]*\.([a-z]{2,4})$/" placeholder="Insira um e-mail">
+            </div>
+
+            <div ng-class="{'has-error' : formClient.telClient.$invalid && formClient.telClient.$dirty, 'has-success' : formClient.telClient.$valid, 'form-group': true }">
+              <input type="text" ng-model="client.tel" name="telClient" ng-required="true" class="form-control tel" ng-pattern="/^\d{4,5}-\d{4}$/" placeholder="Insira um telefone">
+            </div>
+
+            <div ng-class="{'has-error' : formClient.cepClient.$invalid && formClient.cepClient.$dirty, 'has-success' : formClient.cepClient.$valid, 'form-group': true }">
+              <input type="text" ng-model="client.cep" name="cepClient" ng-required="true" class="form-control cep" ng-pattern="/^\d{5}-\d{3}$/" placeholder="Insira um CEP"><!-- address cep or zip code? Decision Lucas ... -->
+            </div>
+
+            <div ng-class="{'has-error' : formClient.addressClient.$invalid && formClient.addressClient.$dirty, 'has-success' : formClient.addressClient.$valid, 'form-group': true }">
+              <input type="text" ng-model="client.address" name="addressClient" ng-required="true" class="form-control address" ng-minlength="5" ng-maxlength="200" placeholder="Insira um endereço">
+            </div>
+
+            <div class="form-group">
+              <button ng-hide="editing" ng-click="add(client);" ng-disabled="formClient.$invalid" class="btn btn-success">Adicionar</button>
+              <button ng-show="editing" ng-click="save(client);" ng-disabled="formClient.$invalid" class="btn btn-info">
+                <span class="glyphicon glyphicon-floppy-open" aria-hidden="true"></span>
+                Salvar
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="list">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Visualizar cadastrados</h2>
+      </div>
+    </div>
+
+    <div class="row search">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <input type="text" ng-model="searchName" class="form-control" placeholder="Buscar pelo nome">
+        </div>
+      </div>
+
+      <div class="col-sm-9">
+        <div class="form-group">
+          <input type="text" ng-model="searchKeys" class="form-control" placeholder="Buscar por geral">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container-fluid"> -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th ng-click="orderBy('name')" class="name" style="cursor: pointer;">Nome</th>
+              <th ng-click="orderBy('email')" class="email" style="cursor: pointer;">E-mail</th>
+              <th ng-click="orderBy('tel')" class="tel">Telefone</th>
+              <th ng-click="orderBy('cep')" class="cep hidden-xs">CEP</th>
+              <th ng-click="orderBy('address')" class="address hidden-xs">Endereço</th>
+              <th class="action">Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="client in filterData = (clients | filter : {name: searchName}) | orderBy:order:reverse | limitTo:3:3*(page-1)">
+              <td>{{client.name | uppercase}}</td>
+              <td>{{client.email }}</td>
+              <td>{{client.tel}}</td>
+              <td class="hidden-xs">{{client.cep}}</td>
+              <td class="hidden-xs">{{client.address | uppercase}}</td>
+              <td>
+                <button ng-click="edit(client);" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                  Editar
+                </button>
+                <!--<button ng-click="destroy($index);" class="btn btn-danger">Delete</button>-->
+                <button ng-click="destroy(client);" class="btn btn-danger">
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                  Exluir
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="text-center">
+          <uib-pagination class="pagination-sm pagination" total-items="filterData.length" ng-model="page" ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=3>
+          </uib-pagination>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<ng-include src="'views/footer.html'"></ng-include> <!-- include != the header? this is only a demo the skills -->
